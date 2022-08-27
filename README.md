@@ -8,3 +8,10 @@ There are two available options for creating a new Kubernetes cluster with nodes
    1) AWS CLI
    2) kubectl 
    3) Required IAM permissions
+   
+  # aws eksctl
+  Prerequisites
+   1) kubectl
+   2) eksctl 
+   3) Required IAM permissions
+  
