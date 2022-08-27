@@ -1,0 +1,6 @@
+// default:
+eksctl create cluster --name my-cluster --region ap-south-1 --version 1.23 --vpc-private-subnets subnet-ExampleID1,subnet-ExampleID2 --without-nodegroup
+
+//custom:
+eksctl create cluster -f cluster.yaml
+eksctl delete cluster -f cluster.yaml
