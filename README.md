@@ -1,17 +1,27 @@
-# aws-eks-deployment
-There are two available options for creating a new Kubernetes cluster with nodes in Amazon EKS
-  1) eksctl (automatic- command line utility)
-  2) aws cli (manual)
-  
-  # aws cli
- Prerequisites
-   1) AWS CLI
-   2) kubectl 
-   3) Required IAM permissions
-   
-  # aws eksctl
-  Prerequisites
-   1) kubectl
-   2) eksctl 
-   3) Required IAM permissions
-  
+# AWS EKS Deployment
+
+This repository contains configuration templates and scripts to deploy an **Amazon EKS (Elastic Kubernetes Service)** cluster using two methods:  
+1. **eksctl** (automatic provisioning)  
+2. **AWS CLI** (manual provisioning)  
+
+---
+
+## 📦 What’s in This Repo
+
+- `cluster.yaml` / `cluster2.yaml` — Kubernetes cluster definitions  
+- `eks-cluster-role-trust-policy.json` — IAM trust policy for cluster roles  
+- Additional supporting YAML/JSON templates for infrastructure setup  
+
+---
+
+## 🛠️ Deployment Methods
+
+### Using eksctl (Automatic)  
+Prerequisites:  
+- `eksctl` installed  
+- `kubectl` installed  
+- IAM permissions to create AWS resources  
+
+Usage:
+```bash
+eksctl create cluster -f cluster.yaml
